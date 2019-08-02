@@ -5,21 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPOM {
+public class AdminLoginPOM {
 	private WebDriver driver; 
 	
-	public LoginPOM(WebDriver driver) {
+	public AdminLoginPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(name="email")
+	@FindBy(id="input-username")
 	private WebElement userName; 
 	
-	@FindBy(name="password")
+	@FindBy(id="input-password")
 	private WebElement password;
 	
-	@FindBy(xpath="//*[@id=\"content\"]/div/div[2]/div/form/input")
+	@FindBy(xpath="//*[@id=\"content\"]/div/div/div/div/div[2]/form/div[3]/button")
 	private WebElement loginBtn; 
 	
 	public void sendUserName(String userName) {

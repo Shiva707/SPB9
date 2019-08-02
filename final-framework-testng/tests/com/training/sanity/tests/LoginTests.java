@@ -11,15 +11,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
+import com.training.pom.AdminLoginPOM;
 import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
 public class LoginTests {
 
-	private WebDriver driver;
-	private String baseUrl;
-	private LoginPOM loginPOM;
+	public WebDriver driver;
+	private String baseUrl1;
+	private AdminLoginPOM adminloginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -33,11 +34,11 @@ public class LoginTests {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		loginPOM = new LoginPOM(driver); 
-		baseUrl = properties.getProperty("baseURL");
+		adminloginPOM = new AdminLoginPOM(driver); 
+		baseUrl1 = properties.getProperty("baseURL1");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
-		driver.get(baseUrl);
+		driver.get(baseUrl1);
 	}
 	
 	@AfterMethod
@@ -47,9 +48,9 @@ public class LoginTests {
 	}
 	@Test
 	public void validLoginTest() {
-		loginPOM.sendUserName("admin");
-		loginPOM.sendPassword("admin@123");
-		loginPOM.clickLoginBtn(); 
+		adminloginPOM.sendUserName("admin");
+		adminloginPOM.sendPassword("admin@123");
+		adminloginPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("First");
 	}
 }
