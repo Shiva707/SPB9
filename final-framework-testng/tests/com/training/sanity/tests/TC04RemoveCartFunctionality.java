@@ -14,17 +14,16 @@ import org.testng.annotations.Test;
 import com.training.generics.ScreenShot;
 import com.training.pom.ChangePassword;
 import com.training.pom.LoginPOM;
+import com.training.pom.UniformStore;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class ChangePasswordTest  {
-	
-	//extends LoginTests (to be covered later)
+public class TC04RemoveCartFunctionality {
 
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
-	private ChangePassword chgPass;
+	private UniformStore uStore;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -39,7 +38,7 @@ public class ChangePasswordTest  {
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
-		chgPass = new ChangePassword(driver); 
+		uStore = new UniformStore(driver); 
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -55,7 +54,7 @@ public class ChangePasswordTest  {
 	
 	
 	@Test
-	public void ChangePwdTest() {
+	public void ViewCart() {
 		
 		driver.findElement(By.xpath("//*[@id=\"top-links1\"]/ul/li[3]/a/span[2]")).click();
 		driver.findElement(By.xpath("//*[@id=\"top-links1\"]/ul/li[3]/ul/li[2]/a")).click();		
@@ -63,11 +62,15 @@ public class ChangePasswordTest  {
 		loginPOM.sendPassword("August@1");
 		loginPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("First");
-		chgPass.clickchangepassword();
-		chgPass.sendNewPassword("crAk7cab1");
-		chgPass.sendconfirmPassword("crAk7cab1");
-		chgPass.clickContBtn();
+		driver.findElement(By.linkText("Uniform Store")).click();
+		uStore.clickRegularrustTshirt();
+		uStore.clickChestsize();
+		uStore.selectSize();
+		uStore.clickAddToCart();
+		uStore.clickViewCart();
 		screenShot.captureScreenShot("Second");
+		uStore.clickRemoveItem();
+		screenShot.captureScreenShot("Third");
 	
 }
 

@@ -22,6 +22,12 @@ public class AdminLoginPOM {
 	@FindBy(xpath="//*[@id=\"content\"]/div/div/div/div/div[2]/form/div[3]/button")
 	private WebElement loginBtn; 
 	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div/h1")
+	private WebElement verifymessage;
+	
+	@FindBy(xpath = "//*[@id=\"content\"]/div/div/div/div/div[2]/div")
+	private WebElement verifymessage2;
+	
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -35,4 +41,14 @@ public class AdminLoginPOM {
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
+	
+	public String verifymessageprint()
+	{
+		return this.verifymessage.getText();
+	} 
+	
+	public String verifymessageprint2()
+	{
+		return this.verifymessage2.getText();
+	} 
 }

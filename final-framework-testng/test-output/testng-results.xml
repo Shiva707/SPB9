@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-07-30T07:30:21Z" name="Default suite" finished-at="2019-07-30T07:30:45Z" duration-ms="24177">
+  <suite started-at="2019-08-09T16:42:14Z" name="Default suite" finished-at="2019-08-09T16:42:36Z" duration-ms="21403">
     <groups>
     </groups>
-    <test started-at="2019-07-30T07:30:21Z" name="Default test" finished-at="2019-07-30T07:30:45Z" duration-ms="24177">
-      <class name="com.training.sanity.tests.LoginTests">
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@6e75aa0d]" started-at="2019-07-30T07:30:21Z" name="setUpBeforeClass" finished-at="2019-07-30T07:30:21Z" duration-ms="13" status="PASS">
+    <test started-at="2019-08-09T16:42:14Z" name="Default test" finished-at="2019-08-09T16:42:36Z" duration-ms="21403">
+      <class name="com.training.sanity.tests.OrderReturn">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.OrderReturn@6e75aa0d]" started-at="2019-08-09T16:42:14Z" name="setUpBeforeClass" finished-at="2019-08-09T16:42:26Z" duration-ms="11319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@6e75aa0d]" started-at="2019-07-30T07:30:21Z" name="setUp" finished-at="2019-07-30T07:30:32Z" duration-ms="11112" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.OrderReturn@6e75aa0d]" started-at="2019-08-09T16:42:26Z" name="setUp" finished-at="2019-08-09T16:42:26Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@6e75aa0d]" started-at="2019-07-30T07:30:32Z" name="validLoginTest" finished-at="2019-07-30T07:30:43Z" duration-ms="11234" status="PASS">
+        <test-method signature="GotoOrderHistoryTest1()[pri:1, instance:com.training.sanity.tests.OrderReturn@6e75aa0d]" started-at="2019-08-09T16:42:26Z" name="GotoOrderHistoryTest1" finished-at="2019-08-09T16:42:29Z" duration-ms="3052" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@6e75aa0d]" started-at="2019-07-30T07:30:43Z" name="tearDown" finished-at="2019-07-30T07:30:45Z" duration-ms="1757" status="PASS">
+        </test-method> <!-- GotoOrderHistoryTest1 -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.OrderReturn@6e75aa0d]" started-at="2019-08-09T16:42:29Z" name="setUp" finished-at="2019-08-09T16:42:29Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="GotoOrderHistoryTest2()[pri:2, instance:com.training.sanity.tests.OrderReturn@6e75aa0d]" started-at="2019-08-09T16:42:29Z" name="GotoOrderHistoryTest2" finished-at="2019-08-09T16:42:34Z" duration-ms="5201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GotoOrderHistoryTest2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.OrderReturn@6e75aa0d]" started-at="2019-08-09T16:42:34Z" name="tearDown" finished-at="2019-08-09T16:42:36Z" duration-ms="1797" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.LoginTests -->
+      </class> <!-- com.training.sanity.tests.OrderReturn -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -14,16 +14,15 @@ import org.testng.annotations.Test;
 import com.training.generics.ScreenShot;
 import com.training.pom.ChangePassword;
 import com.training.pom.LoginPOM;
-import com.training.pom.UniformStore;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class RemoveCartFunctionality {
-
+public class General_NormalUserLogin {
+	
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
-	private UniformStore uStore;
+	private ChangePassword chgPass;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -38,7 +37,7 @@ public class RemoveCartFunctionality {
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
-		uStore = new UniformStore(driver); 
+		chgPass = new ChangePassword(driver); 
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -54,26 +53,13 @@ public class RemoveCartFunctionality {
 	
 	
 	@Test
-	public void ViewCart() {
+	public void NormalUserLoginTest() {
 		
 		driver.findElement(By.xpath("//*[@id=\"top-links1\"]/ul/li[3]/a/span[2]")).click();
 		driver.findElement(By.xpath("//*[@id=\"top-links1\"]/ul/li[3]/ul/li[2]/a")).click();		
-		loginPOM.sendUserName("shivashankar.work@gmail.com");
-		loginPOM.sendPassword("August@1");
+		loginPOM.sendUserName("shivashankar.work@hotmail.com");
+		loginPOM.sendPassword("crAk7abc");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("First");
-		driver.findElement(By.linkText("Uniform Store")).click();
-		uStore.clickRegularrustTshirt();
-		uStore.clickChestsize();
-		uStore.selectSize();
-		uStore.clickAddToCart();
-		uStore.clickViewCart();
-		screenShot.captureScreenShot("Second");
-		uStore.clickRemoveItem();
-		screenShot.captureScreenShot("Third");
-	
+
 }
-
-	
-
 }
