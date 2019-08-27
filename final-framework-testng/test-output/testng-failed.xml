@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.AddCategories2usingEXT">
+      <class name="com.training.sanity.tests.TC12FilterProduct">
         <methods>
+          <include name="filterProductTest"/>
           <include name="setUpBeforeClass"/>
-          <include name="addCategoriesTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.AddCategories2usingEXT -->
+      </class> <!-- com.training.sanity.tests.TC12FilterProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
