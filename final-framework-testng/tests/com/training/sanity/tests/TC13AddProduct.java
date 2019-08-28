@@ -22,24 +22,13 @@ public class TC13AddProduct extends TC05AdminLoginTests{
 		
 		prodPOM = new ProductPOM(driver);
 		prodPOM.clickProduct();
-		prodPOM.enterProductName("Blazer(II-V)");
-		screenShot.captureScreenShot("First");
-		prodPOM.enterProductPrice("3000");
-		screenShot.captureScreenShot("Second");
-		prodPOM.selectStatus();
-		screenShot.captureScreenShot("Third");
-		prodPOM.enterProductModel("Blz-014");
-		screenShot.captureScreenShot("Fourth");
-		prodPOM.enterProductQuantity("100");
-		screenShot.captureScreenShot("Fifth");
-		prodPOM.clickFilterButton();
-		screenShot.captureScreenShot("Sixth");
-		
-		String expected = prodPOM.verifymessageprint();
-		assertEquals("Blazer(II-V)",expected);
-		System.out.println(expected);
-		
+		prodPOM.clickaddProdbtn();
+		prodPOM.enterProdName("Shiva Blazer");
+		prodPOM.enterProdMetatag("Shiva Metatag1");
+		prodPOM.clickDatatab();
+		prodPOM.fillDatafields("SHI-111", "3000", "10");
+		prodPOM.saveProd();
 		
 	}
-
+	
 }

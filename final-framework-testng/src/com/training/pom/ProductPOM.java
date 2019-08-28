@@ -42,6 +42,32 @@ private WebDriver driver;
 	@FindBy(xpath = "//*[@id=\"form-product\"]/div/table/tbody/tr/td[3]")
 	private WebElement verifymessage;
 	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div/div/a/i")
+	private WebElement addProdbtn;
+	
+	@FindBy(id = "input-name1")
+	private WebElement ProductNametext;
+	
+	@FindBy(id = "input-meta-title1")
+	private WebElement ProductMetatag;
+	
+	@FindBy(xpath = "//*[@id=\"form-product\"]/ul/li[2]/a")
+	private WebElement Datatab;
+	
+	@FindBy(id = "input-model")
+	private WebElement model;
+	
+	@FindBy(id = "input-price")
+	private WebElement price;
+	
+	@FindBy(id = "input-quantity")
+	private WebElement qty;
+	
+	@FindBy(xpath="//*[@id=\"content\"]/div[1]/div/div/button/i")
+	private WebElement Save;
+	
+	@FindBy(xpath="//*[@id=\"content\"]/div[2]/div[1]")
+	private WebElement verifymessage1;
 	
 	
 	public void clickProduct() {
@@ -72,13 +98,46 @@ private WebDriver driver;
 		s.selectByVisibleText("Enabled");
 	}
 	
+	public void clickaddProdbtn() {		
+		this.addProdbtn.click();
+	}
+	
 	public void clickFilterButton() {		
 		this.FilterButton.click();
 	}
+	
+	public void enterProdName(String prodname) {		
+		this.ProductNametext.sendKeys(prodname);
+	}
+	
+	public void clickDatatab() {		
+		this.Datatab.click();
+	}
+	
+	public void enterProdMetatag(String prodmetatag) {		
+		this.ProductMetatag.sendKeys(prodmetatag);
+	}
+	
+	public void fillDatafields(String modelname, String pricevalue, String qtyvalue ) {		
+		this.model.sendKeys(modelname);
+		this.price.sendKeys(pricevalue);
+		this.qty.clear();
+		this.qty.sendKeys(qtyvalue);
+	}
+	
+	public void saveProd() {
+		
+		this.Save.click();
+	}
+
 	
 	public String verifymessageprint()
 	{
 		return this.verifymessage.getText();
 	} 
 	
+	public String verifymessageprint1()
+	{
+		return this.verifymessage1.getText();
+	} 
 }
