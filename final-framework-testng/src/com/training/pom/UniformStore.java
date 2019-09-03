@@ -35,6 +35,26 @@ public class UniformStore {
 	@FindBy(xpath = "//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/span/button[2]/i")
 	private WebElement RemoveItem;
 	
+	@FindBy(linkText = "Checkout")
+	private WebElement Checkout;
+	
+	@FindBy(id = "button-payment-address")
+	private WebElement Continue1;
+	
+	@FindBy(id = "button-shipping-address")
+	private WebElement Continue2;
+	
+	@FindBy(id = "button-shipping-method")
+	private WebElement Continue3;
+	
+	@FindBy(name = "agree")
+	private WebElement Policyreadchk;
+	
+	@FindBy(id = "button-payment-method")
+	private WebElement ContinuePM;
+	
+	@FindBy(id = "button-confirm")
+	private WebElement ConfirmOrder;
 	
 	
 	public void clickRegularrustTshirt() {
@@ -65,4 +85,31 @@ public class UniformStore {
 		this.RemoveItem.click();	
 	}
 	
+	public void clickCheckout() {
+		this.Checkout.click();	
+	}
+	
+	public void clickContinue1() {
+		this.Continue1.click();	
+	}
+	
+	public void clickContinue2() {
+		this.Continue2.click();	
+	}
+	
+	public void clickContinue3() {
+		this.Continue3.click();	
+	}
+	
+	public void clickPolicyreadchk() {
+		this.Policyreadchk.click();	
+	}
+	
+	public void clickContinuePM() {
+		this.ContinuePM.click();	
+	}
+	
+	public void clickConfirmOrder() {
+		this.ConfirmOrder.click();	
+	}
 }

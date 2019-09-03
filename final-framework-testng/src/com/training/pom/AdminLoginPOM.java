@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class AdminLoginPOM {
 	private WebDriver driver; 
@@ -28,6 +29,22 @@ public class AdminLoginPOM {
 	@FindBy(xpath = "//*[@id=\"content\"]/div/div/div/div/div[2]/div")
 	private WebElement verifymessage2;
 	
+	@FindBy(xpath = "//a[@class = 'parent']/span")
+	private WebElement Sales;
+	
+	@FindBy(xpath = "//*[@id=\"sale\"]/ul/li[1]/a")
+	private WebElement Orders;
+	
+	@FindBy(xpath = "//*[@id=\"form-order\"]/div/table/tbody/tr[1]/td[8]/a[1]/i")
+	private WebElement ViewOrder;
+	
+	@FindBy(id = "input-order-status")
+	private WebElement OrderStatus;
+	
+	@FindBy(id = "button-history")
+	private WebElement AddHistory;
+	
+	
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -51,6 +68,29 @@ public class AdminLoginPOM {
 		this.loginBtn.click(); 
 	}
 	
+	public void clickSales() {
+		this.Sales.click(); 
+	}
+	
+	public void clickOrders() {
+		this.Orders.click(); 
+	}
+	
+	public void clickViewOrders() {
+		this.ViewOrder.click(); 
+	}
+	
+	public void selectOrderStatus() {
+		this.OrderStatus.click(); 
+		
+		Select select = new Select(OrderStatus);
+		select.selectByVisibleText("Complete");
+	}
+	
+	public void clickAddHistory() {
+		this.AddHistory.click(); 
+	}
+		
 	public String verifymessageprint()
 	{
 		return this.verifymessage.getText();
