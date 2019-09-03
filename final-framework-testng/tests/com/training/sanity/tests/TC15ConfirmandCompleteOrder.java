@@ -90,7 +90,7 @@ public class TC15ConfirmandCompleteOrder {
 						
 		}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2)
 	public void addOrderHistory() {
 		
 		adminloginPOM.sendUserName("admin");
@@ -117,8 +117,7 @@ public class TC15ConfirmandCompleteOrder {
 		assertEquals("ORDER HISTORY",expected);
 		System.out.println(expected);		
 		screenShot.captureScreenShot("First");
-		
-	
+			
 	}
 
 
