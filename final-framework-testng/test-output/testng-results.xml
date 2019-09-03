@@ -2,36 +2,48 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-28T06:22:30Z" name="Default suite" finished-at="2019-08-28T06:22:46Z" duration-ms="16087">
+  <suite started-at="2019-09-02T16:54:39Z" name="Default suite" finished-at="2019-09-02T16:56:26Z" duration-ms="106779">
     <groups>
     </groups>
-    <test started-at="2019-08-28T06:22:30Z" name="Default test" finished-at="2019-08-28T06:22:46Z" duration-ms="16087">
-      <class name="com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg">
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg@7fc229ab]" started-at="2019-08-28T06:22:30Z" name="setUpBeforeClass" finished-at="2019-08-28T06:22:38Z" duration-ms="7333" status="PASS">
+    <test started-at="2019-09-02T16:54:39Z" name="Default test" finished-at="2019-09-02T16:56:26Z" duration-ms="106779">
+      <class name="com.training.sanity.tests.TC11AddCategoriesandDBtest">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.TC11AddCategoriesandDBtest@2cbb3d47]" started-at="2019-09-02T16:54:39Z" name="setUpBeforeClass" finished-at="2019-09-02T16:54:57Z" duration-ms="18687" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg@7fc229ab]" started-at="2019-08-28T06:22:38Z" name="validLoginTest" finished-at="2019-08-28T06:22:40Z" duration-ms="2371" status="PASS">
+        <test-method signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.TC11AddCategoriesandDBtest@2cbb3d47]" started-at="2019-09-02T16:54:57Z" name="validLoginTest" finished-at="2019-09-02T16:56:18Z" duration-ms="80861" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg@7fc229ab]" started-at="2019-08-28T06:22:38Z" name="setUp" finished-at="2019-08-28T06:22:38Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.TC11AddCategoriesandDBtest@2cbb3d47]" started-at="2019-09-02T16:54:57Z" name="setUp" finished-at="2019-09-02T16:54:57Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg@7fc229ab]" started-at="2019-08-28T06:22:40Z" name="setUp" finished-at="2019-08-28T06:22:40Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.TC11AddCategoriesandDBtest@2cbb3d47]" started-at="2019-09-02T16:56:19Z" name="setUp" finished-at="2019-09-02T16:56:19Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="filterProductTest()[pri:2, instance:com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg@7fc229ab]" started-at="2019-08-28T06:22:40Z" name="filterProductTest" finished-at="2019-08-28T06:22:45Z" duration-ms="4540" status="PASS">
+        <test-method signature="addCategoriesDBTest(java.lang.String, java.lang.String)[pri:2, instance:com.training.sanity.tests.TC11AddCategoriesandDBtest@2cbb3d47]" started-at="2019-09-02T16:56:19Z" name="addCategoriesDBTest" data-provider="db-inputs" finished-at="2019-09-02T16:56:24Z" duration-ms="4778" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Swim Wear]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SwimMetatitle]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- filterProductTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg@7fc229ab]" started-at="2019-08-28T06:22:45Z" name="tearDown" finished-at="2019-08-28T06:22:46Z" duration-ms="1808" status="PASS">
+        </test-method> <!-- addCategoriesDBTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.TC11AddCategoriesandDBtest@2cbb3d47]" started-at="2019-09-02T16:56:24Z" name="tearDown" finished-at="2019-09-02T16:56:26Z" duration-ms="1773" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg -->
+      </class> <!-- com.training.sanity.tests.TC11AddCategoriesandDBtest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

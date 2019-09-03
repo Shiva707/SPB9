@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg">
+      <class name="com.training.sanity.tests.TC11AddCategoriesandDBtest">
         <methods>
           <include name="setUpBeforeClass"/>
-          <include name="filterProductTest"/>
+          <include name="addCategoriesDBTest" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.TC14AddProduct_Invaliddetails_Errormsg -->
+      </class> <!-- com.training.sanity.tests.TC11AddCategoriesandDBtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
