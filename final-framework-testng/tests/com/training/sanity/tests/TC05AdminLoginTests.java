@@ -22,7 +22,7 @@ import com.training.utility.DriverNames;
 public class TC05AdminLoginTests {
 
 	public WebDriver driver;
-	private String baseUrl1;
+	private String baseURL;
 	private AdminLoginPOM adminloginPOM;
 	private static Properties properties;
 	public ScreenShot screenShot;
@@ -34,10 +34,10 @@ public class TC05AdminLoginTests {
 		properties.load(inStream);
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		adminloginPOM = new AdminLoginPOM(driver); 
-		baseUrl1 = properties.getProperty("baseURL1");
+		baseURL = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
-		driver.get(baseUrl1);
+		driver.get(baseURL);
 	}
 
 	@BeforeMethod

@@ -18,7 +18,7 @@ public class TC13AddProduct extends TC05AdminLoginTests{
 	
 	
 	@Test(priority = 2)
-	public void filterProductTest() {
+	public void addProductTest() {
 		
 		prodPOM = new ProductPOM(driver);
 		prodPOM.clickProduct();

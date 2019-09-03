@@ -28,7 +28,7 @@ private WebDriver driver;
 	private WebElement EditCategory; 
 	
 	@FindBy(id="input-name1")
-	private WebElement CatgoryName; 
+	private WebElement CategoryName; 
 	
 	@FindBy(id="//*[@id=\"language1\"]/div[2]/div/div/div[3]/div[2]")
 	private WebElement Description; 
@@ -67,22 +67,32 @@ private WebDriver driver;
 		this.EditCategory.click();
 	}	
 	
-	public void fillTextfields() {
-		this.CatgoryName.sendKeys("Ethnic Wear");
+		public void fillTextfields() {
+		/*this.CategoryName.sendKeys("Ethnic Wear");
 		try {
 			this.Description.sendKeys("This dress is to be worn on Festival days");
 		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
-		this.Metatag.sendKeys("Ethnic Wear - Tag 1");
+		this.Metatag.sendKeys("Ethnic Wear - Tag 1");*/
 		this.Save.click();
+		}
 		
-	}	
+		public void sendCategoryame(String CategoryName) {
+		
+		this.CategoryName.sendKeys(CategoryName);
+		}
+		
+		public void sendMetatag(String Metatag) {
+			
+			this.Metatag.sendKeys(Metatag);
+		}
+				
 	
-	public void editTextfields() {
-		this.CatgoryName.clear();
-		this.CatgoryName.sendKeys("Ethnic Wear");
+		public void editTextfields() {
+		this.CategoryName.clear();
+		this.CategoryName.sendKeys("Ethnic Wear");
 		try {
 			this.Description.sendKeys("This dress is to be worn on Festival days");
 		} catch (Exception e) {
@@ -115,6 +125,14 @@ private WebDriver driver;
 	public void confirmAlert() {
 		
 		driver.switchTo().alert().accept();
+	}
+	
+	public String getCategoryName(String CategoryName) {
+		return this.CategoryName.getAttribute("value");
+	}
+	
+	public String getMetatag(String Metatag) {
+		return this.Metatag.getAttribute("value");
 	}
 
 

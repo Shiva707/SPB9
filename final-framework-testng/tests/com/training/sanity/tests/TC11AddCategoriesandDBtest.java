@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.ScreenShot;
 import com.training.pom.AdminLoginPOM;
 import com.training.pom.CategoriesPOM;
@@ -27,20 +28,26 @@ public class TC11AddCategoriesandDBtest extends TC05AdminLoginTests{
 	private CategoriesPOM catPOM;
 	
 	
-	@Test(priority = 2)
-	public void addCategoriesTest() {
+	@Test(priority = 2, dataProvider = "db-inputs", dataProviderClass = LoginDataProviders.class)
+	public void addCategoriesDBTest(String CategoryName, String Metatag) {
 		
 		catPOM = new CategoriesPOM(driver);
 		catPOM.clickCategory();
 		screenShot.captureScreenShot("First");
+		catPOM.sendCategoryame(CategoryName);
+		
+		String CATEGORYNAME = catPOM.getCategoryName(CategoryName);
+		
+		catPOM.sendMetatag(Metatag);
+		
+		String METATAG = catPOM.getMetatag(Metatag);
+		
 		catPOM.fillTextfields();
 		screenShot.captureScreenShot("Second");
 		
-		String expected = catPOM.verifymessageprint();
-		 
-		Assert.assertTrue(expected.contains("You have modified"));
-		System.out.println(expected);		
-		screenShot.captureScreenShot("Third");
+		Assert.assertEquals(CATEGORYNAME, CategoryName);
+		Assert.assertEquals(METATAG, Metatag);
+		
 		
 	}
 }

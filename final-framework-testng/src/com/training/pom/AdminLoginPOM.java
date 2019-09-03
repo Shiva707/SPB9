@@ -38,6 +38,15 @@ public class AdminLoginPOM {
 		this.password.sendKeys(password); 
 	}
 	
+	public String getUserName(String userName) {
+		return this.userName.getAttribute("value");
+	}
+	
+	public String getPassword(String password) {
+		return this.password.getAttribute("value");
+	}
+	
+	
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
